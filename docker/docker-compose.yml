@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: study-fe
+    build:
+      context: ..
+      args:
+        PORT: 3000
+        CYPRESS_PORT: 1234
+        BACKEND_URL: 'http://localhost:4000'
+      dockerfile: docker/Dockerfile.dev
+    entrypoint: sh -c "bash scripts/frontend-entrypoint.sh && tail -f /dev/null"
+    cap_add:
+      - SYS_ADMIN
+    volumes:
+      # overwrites node_modules installation with empty folder
+      - ..:/opt/lib
+      # overwrite node_modules directly from host with container
+      # enables access to node_modules installation in container
+      # creates an empty node_modules folder in host
+      # - /usr/workspace/my-app/node_modules
+    working_dir: /opt/lib
+    # prevent container from exiting immediately
+    stdin_open: true
+    # entrypoint: ["yarn"]
+    ports:
+      - 3000:3000
+      - 1234:1234
+    # command: npx babel --watch src --out-dir . --presets react-app/prod
