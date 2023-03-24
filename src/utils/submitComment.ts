@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASEURL, ResourceID, userID } from "./interfaces";
+import { BASE_URL, ResourceID, userID } from "./interfaces";
 
 export async function submitComment(
   resourceID: ResourceID,
@@ -10,5 +10,5 @@ export async function submitComment(
     user_id: userID,
     message: commentMessage,
   };
-  await axios.post(`${BASEURL}/resources/comments/${resourceID}`, requestBody);
+  await axios.post(`${BASE_URL}/resources/comments/${resourceID}`, requestBody);
 }

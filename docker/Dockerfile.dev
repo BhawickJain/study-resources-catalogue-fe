@@ -3,7 +3,7 @@ FROM node:16.17-alpine
 
 ARG PORT=3000
 ARG CYPRESS_PORT=1234
-ARG BACKEND_URL
+ARG REACT_APP_BACKEND_URL
 
 # Installs latest Chromium (89) package.
 RUN apk add --no-cache \
@@ -18,7 +18,7 @@ RUN apk add --no-cache \
 
 ENV PORT=$PORT
 ENV CYPRESS_PORT=$CYPRESS_PORT
-ENV BACKEND_URL=$BACKEND_URL
+ENV REACT_APP_BACKEND_URL=$REACT_APP_BACKEND_URL
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry

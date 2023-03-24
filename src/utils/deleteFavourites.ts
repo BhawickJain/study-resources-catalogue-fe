@@ -1,9 +1,9 @@
 import axios from "axios";
-import { BASEURL, userID } from "./interfaces";
+import { BASE_URL, userID } from "./interfaces";
 
 export async function deleteFavourites(
   userID: userID,
   resourceID: number
 ): Promise<void> {
-  await axios.delete(`${BASEURL}/user/${userID}/favourites/${resourceID}`);
+  await axios.delete(`${BASE_URL}/user/${userID}/favourites/${resourceID}`);
 }
