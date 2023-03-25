@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASEURL, ResourceID } from "./interfaces";
+import { BASE_URL, ResourceID } from "./interfaces";
 
 export interface IPreferences {
   likes: number;
@@ -9,7 +9,7 @@ export interface IPreferences {
 export async function getPreferences(
   resourceID: ResourceID
 ): Promise<IPreferences> {
-  const url = `${BASEURL}/resources/preference/${resourceID}`;
+  const url = `${BASE_URL}/resources/preference/${resourceID}`;
   const response = await axios.get(url);
   const preferences = {
     likes: response.data.likes,

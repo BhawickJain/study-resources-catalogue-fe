@@ -1,12 +1,12 @@
 import axios from "axios";
-import { BASEURL, Preference, ResourceID, userID } from "./interfaces";
+import { BASE_URL, Preference, ResourceID, userID } from "./interfaces";
 
 export async function submitPreferences(
   resourceID: ResourceID,
   userID: userID,
   preference: Preference
 ): Promise<void> {
-  const url = `${BASEURL}/resources/preferences`;
+  const url = `${BASE_URL}/resources/preferences`;
   await axios.post(url, {
     user_id: userID,
     resource_id: resourceID,

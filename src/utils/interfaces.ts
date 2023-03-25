@@ -22,8 +22,7 @@ export interface IUser {
   isFaculty: boolean;
 }
 
-export const BASEURL = "https://study-resource-catalog-c5c3.herokuapp.com";
-// export const BASEURL = "http://localhost:4000";
+export const BASE_URL = `${process.env.REACT_APP_BACKEND_URL}`;
 export type Preference = "like" | "dislike";
 
 export type ResourceID = number;
