@@ -3,7 +3,7 @@
 
 describe('My Resource Study Site', () => {
     it('is available online', () => {
-        cy.visit('https://study-resource-catalog-c5c3.netlify.app/')
+        cy.visit('http://localhost:3000')
         cy.get('select#user-dropdown').select('Sevgi')
         cy.contains('Login').click()
         cy.contains('My Study List')
