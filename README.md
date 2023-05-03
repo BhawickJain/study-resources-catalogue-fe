@@ -1,4 +1,9 @@
 # Study Resources App
+<hr>
+<p align="center">
+⚠️ This team project is archived, but you can access the code and the development approach below ⚠️   
+</p>
+<hr>
 
 This is a full-stack application using:
 
