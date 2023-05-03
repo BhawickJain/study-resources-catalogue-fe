@@ -50,7 +50,7 @@ The project uses [Cypress](https://www.cypress.io/) and [Jest](https://jestjs.io
 
 Deployment is performed automatically either on Netlify or [Railway](https://railway.app/) (previously [Heroku](https://github.com/features/actions)) when a pull request is merged into main.
 
-⚠️ for optimum constrast for image viewing, use `light mode` ⚠️   
+⚠️ for optimum contrast for image viewing, use `light mode` ⚠️   
 
 ### Database Design
 ![database design](./docs/img/db.svg)
